@@ -1,0 +1,55 @@
+git pull: this command is used to fetch and merge changes from a remote repository into our current branch. It combines two commands  git fetch (to download the changes) and git merge (to apply the changes).
+
+git pull --rebase: This command also fetches changes from the remote repository but applies your local commits on top of the fetched changes instead of merging them.
+
+git pull vs git pull --rebase
+
+initial Setup
+   - Created a repository and made an initial commit.
+   - Created a feature branch called feature/diff_git_pull_pullRebase.
+
+changes Made in Remote
+   - Simulated a change in the remote repository on the master branch.
+
+using "git pull"
+   - performed "git pull origin master" on the feature branch.
+   - this fetched changes from the remote and created a merge commit.
+   - commit history now shows a non-linear structure due to the merge.
+
+using git pull --rebase
+   - Reset to the state before the pull.
+   - Performed "git pull --rebase origin master".
+   - This applied local commits on top of the fetched changes.
+   - The commit history is now linear, with no merge commits.
+
+result
+   - "git pull" results in a merge commit, which can make the history more complex.
+   - "git pull --rebase" provides a cleaner, linear history, making it easier to follow.For collaborative     projects
+
+
+Steps
+**** git pull ****
+    - create and checkout new branch  (git checkout -b feature/diff_git_pull_pullRebase)
+    - editing file (main-file)
+    - stage changes for the next commit
+    - commit file
+    - check out to main (branch)
+    - editing a file (main-file)
+    - stage changes for the next commit
+    - push to remote
+    - switch back to  feature/diff_git_pull_pullRebase branch
+    - git pull origin main (git pull) --This creates a merge commit if there are conflicts or new changes
+
+**** git pull --rebase ****
+    - create and checkout new branch  (git checkout -b feature/diff_git_pull_pullRebase)
+    - editing file (main-file)
+    - stage changes for the next commit
+    - commit file
+    - check out to main (branch)
+    - editing a file (main-file)
+    - stage changes for the next commit
+    - push to remote
+    - switch back to  feature/diff_git_pull_pullRebase branch
+    - git pull origin main (git pull --rebase) --This rewrites the commit history to place your feature branch commits on top of the main branch changes.
+
+ 
