@@ -1,0 +1,16 @@
+DIFFRENCE BETWEEN GIT PULL AND GIT MERGE
+purpose
+   - git pull -> combines " git fetch " and  " git merge " updates local branch with changes from remote.
+   - git merge ->  merges changes from one local branch to another.
+
+workflow
+   - git pull -> fetches updates, then merges. Conflicts must be resolved.
+   - git merge -> combines branches locally without fetching.
+
+usage scenarios
+   - git pull -> for syncing with remote branches.
+   - git merge -> for integrating feature branches into main branches.
+
+result
+   - git pull -> local branch is updated with remote changes.
+   - git merge -> combines changes or create a merge commit." 
